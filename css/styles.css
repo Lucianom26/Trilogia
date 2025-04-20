@@ -120,7 +120,35 @@
          font-weight: 100;
         }
 
-.contenido.activo {
-  max-height: 500px; /* ajusta según el contenido */
-  padding: .5rem;
-}
+      .contenido.activo {
+       max-height: 500px; /* ajusta según el contenido */
+       padding: .5rem;
+        }
+
+      .section_mas{
+        height: 100vh;
+        width: 100vw;
+        padding: 3.6rem;
+       }
+
+       .section_mas span{
+        color: var(--primarioOscuro);
+        font-weight: bold;
+        gap: .5rem;
+       
+       }
+       @media (max-width: 767px) {
+        .section_mas span{
+          font-size: 4rem; 
+        }
+
+       }
+
+       .section_mas p{
+        color: var(--negro);
+         margin-top: 3rem;
+         
+         font-size: 1.8rem;
+         font-family: 'Gotham-Medium';
+         font-weight: 100;
+       }
