@@ -2,7 +2,7 @@
     --primario: #cac6c5;
     --primarioOscuro: #7b7877;
     --blanco: #fff;
-    --negro: #494646;
+    --negro: #383737;
     
     }
 
@@ -27,7 +27,7 @@
             font-style: italic;
             }
         
-    
+        
     html{
         box-sizing: border-box;
         font-size: 62.5%;
@@ -38,22 +38,25 @@
     }
 
     body{
-        background-color: #fff;
-        font-size: 6rem;
-        line-height: 1.1;
-        height: 100%;
-        width: 100%;
-        font-family: 'Gotham-Light';
-        font-weight: 100;
-        color: var(--primario);
+      background-color: #fff;
+      font-size: 6rem;
+      line-height: 1.1;
+      height: 100%;
+      width: 100%;
+      font-family: 'Gotham-Light';
+      font-weight: 100;
+      color: var(--primario);
+      overflow-x: hidden;
+      text-align: left; /* <-- Añadido */
     }
     /* Navegación de pantalla completa */
     .navegacion {
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        height: 100vh;
-        width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* <-- Corregido */
+      width: 100%;
+      padding: 0 2rem;  
+      margin-top: -2rem;      
       }
 
       .navegacion ul {
@@ -62,6 +65,7 @@
         flex-direction: column;
         gap: 0;
         text-align: left;
+        align-items: flex-start; /* <-- Añadido */
       }
 
       .navegacion a {
@@ -83,12 +87,12 @@
         /* Aquí van los estilos específicos para pantallas pequeñas */
       
         .navegacion ul {
-          gap: .5rem; /* menos espacio entre enlaces */
+          gap: 0; /* menos espacio entre enlaces */
         }
       
         .navegacion a {
           font-size: 4rem; /* letras un poco más pequeñas */
-        
+          line-height: 1;
         }
       
         .simbolo {
@@ -146,27 +150,62 @@
       @media (max-width: 767px) {
         .bloque_mas{
           font-size: 4rem; 
-
         }
        }
 
-     /* .section {
-        height: 100vh;
-        width: 100vw;
-        padding: 3.6rem;
-       }*/
+     .section {
+      width: 100%; /* <-- Cambiado de 100vw */
+      padding: 5.6rem;
+      color: var(--negro);
+      font-size: 1.8rem;
+      font-family: 'Gotham-Light';
+      font-weight: 100;
+      text-align: left; /* <-- Asegura alineación del texto */
+       }
     
 
-     /*  .section p{
-        color: var(--negro);
-         margin-top: 3rem;
-         font-size: 1.8rem;
-         font-family: 'Gotham-Ligth';
-         font-weight: 100;
-       }*/
+     .section .linea-superior{
+         border-top: #494646 1px solid;
+       }
+
        .contenido .linea-superior{
           color: var(--negro);
           font-weight: 100;
           font-size: 1.8rem;
           border-top: #494646 1px solid;
        }
+
+      /* .bloque-programa {
+        padding-left: 3.6rem;
+        padding-right: 3.6rem;
+        max-width: 100%;
+        text-align: left;
+        font-size: 1.8rem;
+        line-height: 1.5;
+      }*/
+      
+      /* En pantallas chicas, reducimos el padding */
+      @media (max-width: 767px) {
+       
+        .section {
+          padding-left: 5.6rem;
+          padding-right: 2rem;
+          font-size: 1.6rem; /* opcional: un poco más chico en mobile */
+        }
+      }
+
+      .capitulo {
+        font-size: 1.8rem;
+        line-height: 0;
+      }
+      
+      .capitulo .numero {
+        display: inline-block;
+        width: 4rem; /* ajustá según el espacio que quieras */
+        text-align: left;
+      }
+      
+      .capitulo .titulo {
+        display: inline-block;
+      }
+      
