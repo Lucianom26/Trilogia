@@ -35,7 +35,6 @@
         margin: 0;
         padding: 0;
         scroll-behavior: smooth;
-        overflow: hidden; /* Evita scroll doble si querés full control */
     }
 
     *, *:before, *:after {
@@ -65,7 +64,7 @@
       align-items: center;
       justify-content: flex-start; /* <-- Corregido */
       width: 100%;
-      height: 100vh; /* Cambiado a 100vh para ocupar toda la pantalla */
+      height: 130vh; /* Cambiado a 100vh para ocupar toda la pantalla */
       padding: 0 2rem;  
       margin-top: -2rem;      
       }
@@ -126,28 +125,32 @@
         margin-left: -0.1em;  /* Juntarlo un poco con la A */
         letter-spacing: -0.1em; /* Ajuste de espacio entre los > */
       }
+
       /* Contenedor del enlace y su sección */
       .bloque-enlace {
+        position: relative;
         margin-bottom: 1rem;
+        width: 100%;
       }
 
 
       .contenido {
-         max-height: 0;
-         overflow: hidden;
-         transition: max-height 0.6s ease, padding 0.3s ease;
-         padding: 0 .5rem;
-         background: var(--blanco);
-         color: var(--negro);
-         margin-top: .5rem;
-         font-size: 1.8rem;
-         font-family: 'Gotham-Light';
-         font-weight: 100;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.6s ease, padding 0.3s ease;
+        padding: 0;
+        background: var(--blanco);
+        color: var(--negro);
+        font-size: 1.8rem;
+        font-family: 'Gotham-Light';
+        font-weight: 100;
+        position: relative; /* <- Mantiene el contenido en el flujo */
+        z-index: 0; /* <- Asegura que no tape otros elementos fuera del nav */
         }
 
       .contenido.activo {
-       max-height: 60rem; /* ajusta según el contenido */
-       padding: .5rem;
+        max-height: 1000px; /* Asegurate que sea más que suficiente */
+        padding: 1rem 0;
         }
       
       .bloque_mas{
@@ -173,7 +176,7 @@
       font-family: 'Gotham-Medium';
       font-weight: 100;
       text-align: left; /* <-- Asegura alineación del texto */
-      box-sizing: border-box;
+      
        }
 
 
