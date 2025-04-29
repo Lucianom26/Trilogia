@@ -1,26 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.enlace').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
+  // Seleccionamos todos los enlaces de la navegación
+  document.querySelectorAll('.enlace').forEach(enlace => {
+    enlace.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevenir el comportamiento por defecto del enlace
 
-      const targetId = this.dataset.target;
-      const section = document.getElementById(targetId);
-      const container = this.closest('.bloque-enlace');
+      const targetId = this.getAttribute('data-target');
+      const target = document.getElementById(targetId); // Obtener el contenido con el id correspondiente
 
-      // Cerrar otras secciones
-      document.querySelectorAll('.contenido').forEach(sec => {
-        if (sec !== section) sec.classList.remove('activo');
+      // Si el contenido ya está abierto, lo cerramos
+      if (target.classList.contains('activo')) {
+        target.classList.remove('activo');
+      } else {
+        // Cerramos todos los contenidos
+        document.querySelectorAll('.contenido').forEach(c => c.classList.remove('activo'));
+        
+        // Abrimos el contenido seleccionado
+        target.classList.add('activo');
+      }
+
+      // Si el enlace tiene el data-target="mas", expandimos la navegación
+      const nav = document.querySelector('.navegacion');
+      if (this.getAttribute('data-target') === 'mas') {
+        nav.classList.toggle('expandido');
+      }
+
+      // Cerramos otros contenidos si están abiertos (para asegurar que solo uno esté abierto)
+      document.querySelectorAll('.contenido').forEach(c => {
+        if (c !== target) { // Excluimos el contenido actual
+          c.classList.remove('activo');
+        }
       });
 
-      // Alternar clase
-      const isActive = section.classList.contains('activo');
-      section.classList.toggle('activo');
-
-      // Scroll hasta el contenedor
-      if (!isActive) {
-        setTimeout(() => {
-          container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 200);
+      // Expande la navegación si es el enlace con data-target="mas"
+      if (this.getAttribute('data-target') === 'mas') {
+        nav.classList.toggle('expandido');
       }
     });
   });

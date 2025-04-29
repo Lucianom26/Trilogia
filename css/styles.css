@@ -1,6 +1,6 @@
 :root{
-    --primario: #cac6c5;
-    --primarioOscuro: #7b7877;
+    --primario: #b7bcbd ;
+    --primarioOscuro: #8e9191;
     --blanco: #fff;
     --negro: #383737;
     
@@ -14,9 +14,9 @@
     }
 
     @font-face {
-        font-family: 'Gotham-Light';
-        src: url(/fuente/Gotham-Light.otf);
-        font-weight: 100;
+        font-family: 'Gotham-Book';
+        src: url(/fuente/Gotham-Book.otf);
+        font-weight: 200;
         font-style: normal;
         }
 
@@ -26,14 +26,18 @@
             font-weight: 300;
             font-style: italic;
             }
+
+            @font-face {
+              font-family: 'Gotham-Light';
+              src: url(/fuente/Gotham-Light.otf);
+              font-weight: 100;
+              font-style: normal;
+              }
         
         
     html{
         box-sizing: border-box;
         font-size: 62.5%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
         scroll-behavior: smooth;
     }
 
@@ -48,7 +52,9 @@
 
     body{
       background-color: #fff;
-      font-size: 6rem;
+      margin: 0;
+      padding: 0;
+      font-size: 1.6rem; /* Cambiado a rem para mejor escalabilidad */
       line-height: 1.1;
       height: 100%;
       width: 100%;
@@ -56,127 +62,177 @@
       font-weight: 100;
       color: var(--primario);
       overflow-x: hidden;
-      text-align: left; /* <-- Añadido */
     }
+  
     /* Navegación de pantalla completa */
-    .navegacion {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start; /* <-- Corregido */
-      width: 100%;
-      height: 130vh; /* Cambiado a 100vh para ocupar toda la pantalla */
-      padding: 0 2rem;  
-      margin-top: -2rem;      
-      }
+.navegacion {
+  width: 100%;
+  height: 90rem; /* Cambiado a vh para ocupar toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  margin: 0 auto;
+  padding: 5rem 5.6rem; /* Espaciado lateral */
+  background-color: var(--blanco); /* Fondo blanco para la navegación */
+  overflow: hidden; /* Descomentar si quieres ocultar el desbordamiento */
+  transition: height 0.4s ease;
+}
+.navegacion ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el padding por defecto */
+  margin: 0; /* Elimina el margen por defecto */
+}
+.navegacion.expandido{
+  height: 100vh; /* ajustá esto según lo que necesite mostrar */
+  background-color: var(--blanco); /* Fondo blanco para la navegación */
+}
 
-      .navegacion ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        text-align: left;
-        align-items: flex-start; /* <-- Añadido */
-      }
+/* Estilo para los enlaces */
+.navegacion .enlace {
+  /*font-size: 7rem; /* Tamaño de fuente más pequeño para el bloque */
+  /*font-family: 'Gotham-Book'; /* Cambiado a Gotham-Light */
+  /*font-weight: 100; /* Cambiado a 100 para mayor ligereza */
+  /*line-height: 1;
+  letter-spacing: 0.1rem; /* Espaciado entre letras */
+  color: var(--primario);
+  text-decoration: none;
+  gap: 0.5rem; /* Espacio entre los enlaces */
+  width: 100%; /* Asegura que el enlace ocupe todo el ancho */
+  transition: background-color 0.3s;
+}
 
-      .navegacion a {
-        text-decoration: none;
-        color: var(--primario);
-        font-weight: bold;
-        transition: color 0.3s ease;
-        display:block;
-        text-decoration: none;
-        position: relative;
-        top: 0;
-        z-index: 10;  
-      }
-      .navegacion a:hover {
-        color: var(--primarioOscuro); /* Color de acento al pasar el mouse */
-      }
-      
-      @media (max-width: 767px) {
-        /* Aquí van los estilos específicos para pantallas pequeñas */
-      
-        .navegacion ul {
-          gap: 0; /* menos espacio entre enlaces */
-        }
-      
-        .navegacion a {
-          font-size: 4rem; /* letras un poco más pequeñas */
-          line-height: 1;
-        }
-      
-        .simbolo {
-          font-size: 0.95em;
-        }
-      }
+.navegacion img {
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+ /* Imagen clara por defecto */
+ .icon1 {
+  content: url('/imagen/Recurso_1.png');
+  width: 100%;
+  max-width: 350px;
+}
+
+.icon2 {
+  content: url('/imagen/Recurso_2.png');
+  width: 100%;
+  max-width: 400px;
+
+}
+.icon3 {
+  content: url('/imagen/Recurso_3.png');
+  width: 100%;
+  max-width: 450px;
+
+}
+.icon4 {
+  content: url('/imagen/Recurso_4.png');
+  width: 100%;
+  max-width: 250px;
+}
+
+.icon5 {
+  content: url('/imagen/Recurso_5.png');
+  width: 100%;
+  max-width: 40px;
+}
+
+/* Imagen oscura al hacer hover en el enlace */
+.enlace:hover .icon-inicio {
+  content: url('/imagen/Recurso_1_oscuro.png');
+}
+
+.enlace:hover .icon-nosotros {
+  content: url('/imagen/Recurso_2_oscuro.png');
+}
+
+.enlace:hover .icon-servicios {
+  content: url('/imagen/Recurso_3_oscuro.png');
+}
+
+.enlace:hover .icon-contacto {
+  content: url('/imagen/Recurso_4_oscuro.png');
+}
+
+.enlace:hover .icon-mas {
+  content: url('/imagen/Recurso_5_oscuro.png');
+}
 
 
-      .inclinada {
-        display: inline-block;
-        transform: rotate(90deg); /* Vuelca la A hacia la derecha */
-        transform-origin: center;
-      }
-      .bloque {
-        display: block;
-        line-height: 1.2;
-      }
-      .simbolo {
-        font-size: 1em;       /* Igual que la letra A */
-        margin-left: -0.1em;  /* Juntarlo un poco con la A */
-        letter-spacing: -0.1em; /* Ajuste de espacio entre los > */
-      }
 
-      /* Contenedor del enlace y su sección */
-      .bloque-enlace {
-        position: relative;
-        margin-bottom: 1rem;
-        width: 100%;
-      }
+/*.navegacion .enlace:hover {
+  color: var(--primarioOscuro);
+  transition: all 0.3s ease-in-out;
+}*/
 
+/*.navegacion .enlace .inclinacion {
+  display: inline-block;  Asegura que el texto se comporte como un bloque en línea 
+  transform: rotate(90deg);  Rotar el texto 
+}*/
 
-      .contenido {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.6s ease, padding 0.3s ease;
-        padding: 0;
-        background: var(--blanco);
-        color: var(--negro);
-        font-size: 1.8rem;
-        font-family: 'Gotham-Light';
-        font-weight: 100;
-        position: relative; /* <- Mantiene el contenido en el flujo */
-        z-index: 0; /* <- Asegura que no tape otros elementos fuera del nav */
-        }
+/*.agrandar {
+  font-size: 7rem;
+  letter-spacing: 0.1rem; Espacia un poco más los símbolos 
+  line-height: 1;
+  margin: 0 auto;
+  padding: 0;
+  height: 0;
+}*/
 
-      .contenido.activo {
-        max-height: 1000px; /* Asegurate que sea más que suficiente */
-        padding: 1rem 0;
-        }
-      
-      .bloque_mas{
-        font-size: 6rem;
-        line-height: 1.1;
-        font-family: 'Gotham-Light';
-        font-weight: bold;
-        color: var(--primarioOscuro);
-      }
+/* Para el acordeón: contenido oculto */
+.contenido {
+  max-height: 0; /* Inicia oculto */
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+  width: 100%;
+  text-align: left; /* Alineamos el texto a la izquierda */
+  font-size: 2rem; /* Tamaño de fuente más pequeño para el contenido */
+  font-family: 'Gotham-Book'; /* Cambiado a Gotham-Light */
+  font-weight: 100; /* Cambiado a 100 para mayor ligereza */
+  color: var(--negro);
+  background-color: var(--blanco); /* Fondo blanco para el contenido */
+  padding: 0 1rem; /* Espaciado horizontal */
+  
+}
 
-      @media (max-width: 767px) {
-        .bloque_mas{
-          font-size: 4rem; 
-        }
-       }
+/* Cuando se activa el acordeón */
+.contenido.activo {
+  max-height: 50rem; /* Ajusta según el tamaño de tu contenido */
+  opacity: 1;
+  padding: 10px 1rem; /* Un poco de padding para el contenido desplegado */
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+}
+ .contenido p{
+  margin: 0.5em 0;
+}
+/* Opcional: Mejorar el espaciado de los textos dentro de las secciones */
+.bloque {
+  display: block;
+  line-height: 1;
+}
 
+.bloque_mas {
+  display: block;
+  line-height: 1;
+  font-size: 6.5rem;
+  font-family: 'Gotham-Book';
+  font-weight: 300;
+  color: var(--primarioOscuro);
+  letter-spacing: 0.1rem;
+}
      .section {
       width: 100%; /* <-- Cambiado de 100vw */
       height: 100vh;
-      padding: 5.6rem;
+      padding: 1rem 5.6rem;
       color: var(--negro);
-      font-size: 2.8rem;
-      font-family: 'Gotham-Medium';
-      font-weight: 100;
+      font-size: 2rem;
+      font-family: 'Gotham-Book';
+      font-weight: 200;
       text-align: left; /* <-- Asegura alineación del texto */
-      
+      margin: 0 auto;
        }
 
 
@@ -186,43 +242,20 @@
 
        .contenido .linea-superior{
           color: var(--negro);
-          font-weight: 100;
-          font-size: 1.8rem;
+          font-weight: 200;
+          font-size: 2rem;
           border-top: #494646 1px solid;
        }
 
-      
-      /* En pantallas chicas, reducimos el padding */
-      @media (max-width: 767px) {
-       
-        .section {
-          padding-left: 5.6rem;
-          padding-right: 2rem;
-          font-size: 1.6rem; /* opcional: un poco más chico en mobile */
-        }
-      
-      
-        .capitulo {
-          font-size: 1.6rem;
-          line-height: 0;
-        }
-      
-        .capitulo .numero{
-          display: inline-block;
-          width: 4rem;
-        }
-
-      }
-
 
       .capitulo {
-        font-size: 2.8rem;
+        font-size: 2rem;
         line-height: 0;
       }
       
       .capitulo .numero {
         display: inline-block;
-        width: 6rem; /* ajustá según el espacio que quieras */
+        width: 5.6rem; /* ajustá según el espacio que quieras */
         text-align: left;
       }
       
@@ -232,41 +265,123 @@
 
       .imagen-principal {
         width: 100%;
-        height: 100vh; /* Cambiado a 100vh para ocupar toda la pantalla */
+        height: 100vh; /* Ocupa la pantalla completa */
       }
       
       .imagen__principal {
         width: 100%;
         height: 100%;
-        background-image: url('/imagen/freepik-proyecto-sin-titulo-20250423222508bQ3Z.png');
+        background-image: url('/imagen/IMG_CREARRESISTIR_1\ FRAME.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
       }
     
-      
-      /* Responsive */
-      @media (max-width: 768px) {
-        .imagen-principal {
-          height: 80vh;
-        }
-      
-        
-      }
-      
-      @media (max-width: 480px) {
-        .imagen-principal {
-          height: 60vh;
-        }
-        .capitulo {
-          font-size: 1.6rem;
-          line-height: 0;
-        }
-      
-        .capitulo .numero{
-          display: inline-block;
-          width: 4rem;
-        }
-       
-      }
-      
+
+
+/* ─── 📱 Móviles hasta 768px ───────────────────── */
+@media screen and (max-width: 768px) {
+  .navegacion {
+    padding: 2rem 2rem;
+  }
+
+  .navegacion .enlace {
+    font-size: 3.8rem;
+  }
+
+  .agrandar {
+    font-size: 3.8rem;
+  }
+
+  .contenido {
+    font-size: 2rem;
+  }
+
+  .bloque_mas {
+    font-size: 4rem;
+  }
+
+  .section {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    height: 80vh; /* Ajustado para móviles */
+  }
+
+  .capitulo {
+    font-size: 2rem;
+  }
+
+  .contenido .linea-superior {
+    font-size: 2rem;
+  }
+  .imagen-principal {
+    height: 50vh; /* Más compacto en móviles */
+  }
+  .imagen__principal {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+}
+
+/* ─── 📱 Móviles pequeños hasta 480px ───────────────────── */
+@media screen and (max-width: 480px) {
+ .navegacion {
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    height: 85vh; /* Ajustado para móviles pequeños */
+  }
+  .icon1 {
+    content: url('/imagen/Recurso_1.png');
+    width: 100%;
+    max-width: 250px; /* Ajustado para móviles pequeños */
+  }
+  .icon2 {
+    content: url('/imagen/Recurso_2.png');
+    width: 100%;
+    max-width: 300px; /* Ajustado para móviles pequeños */
+  }
+  .icon3 {
+    content: url('/imagen/Recurso_3.png');
+    width: 100%;
+    max-width: 350px; /* Ajustado para móviles pequeños */
+  }
+  .icon4 {
+    content: url('/imagen/Recurso_4.png');
+    width: 100%;
+    max-width: 180px; /* Ajustado para móviles pequeños */
+  } 
+ 
+  .navegacion .enlace {
+    font-size: 3rem;
+  }
+
+  .contenido {
+    font-size: 1.6rem;
+    padding: 0 1rem; /* Espaciado horizontal */
+  }
+ 
+  .bloque_mas {
+    font-size: 2.5rem;
+  }
+
+  .section {
+    font-size: 1.8rem;
+    max-height: 60vh; /* Ajustado para móviles pequeños */
+    padding: 1rem 1rem;
+    height: 100vh; /* Ajustado para móviles pequeños */
+  }
+
+  .capitulo {
+    font-size: 1.8rem;
+  }
+
+  .contenido .linea-superior {
+    font-size: 1.8rem;
+  }
+  .imagen-principal {
+    height: 40vh; /* Más compacto en móviles pequeños */
+  }
+}
+
