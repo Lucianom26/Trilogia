@@ -79,7 +79,7 @@
     /* Navegación de pantalla completa */
 .navegacion {
   width: 100%;
-  height: 100%; /* Cambiado a vh para ocupar toda la pantalla */
+  height: 120vh; /* Cambiado a vh para ocupar toda la pantalla */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -296,6 +296,7 @@
 @media screen and (max-width: 768px) {
   .navegacion {
     padding: 2rem 2rem;
+
   }
 
   .navegacion .enlace {
@@ -346,8 +347,8 @@
 @media screen and (max-width: 480px) {
  .navegacion {
     margin: 0 auto;
-    padding: 5rem 1rem;
-    height: 60vh; /* Ajustado para móviles pequeños */
+    padding: 10rem 1rem;
+    height: 120vh; /* Ajustado para móviles pequeños */
   }
   .icon1 {
     content: url('/imagen/Recurso_1.png');
@@ -380,7 +381,7 @@
   }
  
   .bloque_mas {
-    font-size: 5rem;
+    font-size: 3.7rem;
   }
 
   .section {
