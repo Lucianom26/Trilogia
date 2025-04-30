@@ -17,24 +17,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // Abrimos el contenido seleccionado
         target.classList.add('activo');
       }
+      
+   // Cerramos otros contenidos si están abiertos (para asegurar que solo uno esté abierto)
+   document.querySelectorAll('.contenido').forEach(c => {
+    if (c !== target) { // Excluimos el contenido actual
+      c.classList.remove('activo');
+    }
+  });
 
       // Si el enlace tiene el data-target="mas", expandimos la navegación
-      const nav = document.querySelector('.navegacion');
-      if (this.getAttribute('data-target') === 'mas') {
-        nav.classList.toggle('expandido');
-      }
+    //  const nav = document.querySelector('.navegacion');
+     // if (this.getAttribute('data-target') === 'mas') {
+   //     nav.classList.toggle('expandido');
+  //    }
 
-      // Cerramos otros contenidos si están abiertos (para asegurar que solo uno esté abierto)
-      document.querySelectorAll('.contenido').forEach(c => {
-        if (c !== target) { // Excluimos el contenido actual
-          c.classList.remove('activo');
-        }
-      });
-
+   
       // Expande la navegación si es el enlace con data-target="mas"
-      if (this.getAttribute('data-target') === 'mas') {
-        nav.classList.toggle('expandido');
-      }
+     // if (this.getAttribute('data-target') === 'mas') {
+   //     nav.classList.toggle('expandido');
+ //     }
     });
   });
 });
