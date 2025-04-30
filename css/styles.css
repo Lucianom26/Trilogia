@@ -157,8 +157,12 @@
 }
 
 .enlace:hover .icon-nosotros {
+<<<<<<< HEAD
   content: url('/imagen/Recurso_2_gris_oscuro.png');
  
+=======
+  content: url('/imagen/Recurso-2-oscuro.png');
+>>>>>>> e013cd7ca9086055e7f2df37de1af729e344c3a9
 }
 
 .enlace:hover .icon-servicios {
