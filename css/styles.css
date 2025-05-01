@@ -86,10 +86,10 @@
     align-items: flex-start;
     text-align: left;
     margin: 0 auto;
-   padding: 3.5rem 5rem; /* Espaciado lateral */
-   background-color: var(--blanco); /* Fondo blanco para la navegación */
+    padding: 3.5rem 5rem; /* Espaciado lateral */
+    background-color: var(--blanco); /* Fondo blanco para la navegación */
     overflow: hidden; /* Descomentar si quieres ocultar el desbordamiento */
-   transition: height 0.4s ease;
+    transition: height 0.4s ease;
     }
 
 .navegacion ul {
@@ -98,11 +98,13 @@
   margin: 0; /* Elimina el margen por defecto */
   display: flex;
   flex-direction: column;
-  gap: 3rem; /* Espacio vertical entre cada <li> */
+ 
 }
 
 .navegacion li {
   list-style: none;
+  padding: 1.5rem 0; /* Espacio entre los enlaces */
+  margin: 0; /* Elimina el margen por defecto */
 }
 .navegacion.expandido{
   height: 150vh; /* ajustá esto según lo que necesite mostrar */
@@ -186,12 +188,12 @@
   transition: max-height 0.5s ease, opacity 0.3s ease;
   width: 100%;
   text-align: left; /* Alineamos el texto a la izquierda */
-  font-size: 2rem; /* Tamaño de fuente más pequeño para el contenido */
+  font-size: 2.5rem; /* Tamaño de fuente más pequeño para el contenido */
   font-family: 'Gotham-Book'; /* Cambiado a Gotham-Light */
   font-weight: 200; /* Cambiado a 100 para mayor ligereza */
   color: var(--negro);
   background-color: var(--blanco); /* Fondo blanco para el contenido */
-  padding: 0 1rem; /* Espaciado horizontal */
+  padding: 0; /* Espaciado horizontal */
   
 }
 
@@ -200,11 +202,11 @@
 .contenido.activo {
   max-height: 50rem; /* Ajusta según el tamaño de tu contenido */
   opacity: 1;
-  padding: 10px 1rem; /* Un poco de padding para el contenido desplegado */
+  padding: 30px 0; /* Un poco de padding para el contenido desplegado */
   transition: max-height 0.5s ease, opacity 0.3s ease;
 }
  .contenido p{
-  margin: 0.5em 0;
+  margin: 0.2em 0;
 }
 /* Opcional: Mejorar el espaciado de los textos dentro de las secciones */
 .bloque {
@@ -219,30 +221,30 @@
   font-family: 'Gotham-Book';
   font-weight: 300;
   color: var(--primarioOscuro);
-  letter-spacing: 0.1rem;
+  letter-spacing: 0rem;
 }
      .section {
       width: 100%; /* <-- Cambiado de 100vw */
       padding: 3rem 5rem;
       color: var(--negro);
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-family: 'Gotham-Book';
       font-weight: 200;
       text-align: left; /* <-- Asegura alineación del texto */
       margin: 0 auto;
-      letter-spacing: 0.1rem;
+      letter-spacing: 0rem;
        }
        .section-mas {
         width: 100%; /* <-- Cambiado de 100vw */
         height: 100vh;
         padding: 3rem 5rem;
         color: var(--negro);
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-family: 'Gotham-Book';
         font-weight: 200;
         text-align: left; /* <-- Asegura alineación del texto */
         margin: 0 auto;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0rem;
          }
   
       .section-mas img{
@@ -252,23 +254,25 @@
 
       .section-mas .linea-superior{
         border-top: #494646 1px solid;
+        letter-spacing: 0.1rem;
       }
 
      .section .linea-superior{
          border-top: #494646 1px solid;
+         letter-spacing: 0.1rem;
        }
        
 
        .contenido .linea-superior{
           color: var(--negro);
           font-weight: 200;
-          font-size: 2rem;
+          font-size: 2.5rem;
           border-top: #494646 1px solid;
        }
 
 
       .capitulo {
-        font-size: 2rem;
+        font-size: 2.5rem;
         line-height: 0;
       }
       
@@ -311,121 +315,187 @@
       .icon11 {
         content: url('/imagen/11.svg');
         width: 100%;
-        max-width: 30px; /* Ajustado para móviles */
+        max-width: 20px; /* Ajustado para móviles */
       }
 
       .boton-final:hover .icon-volver {
         content: url('/imagen/12.svg');
       }
 
-/* ─── 📱 Móviles hasta 768px ───────────────────── */
-@media screen and (max-width: 768px) {
-  .navegacion {
-    padding: 2rem 2rem;
+      @media (max-width: 428px) {
+        html {
+          font-size: 52%;
+        }
+      
+        body {
+          overflow-x: hidden;
+          padding: 0;
+        }
+      
+        .navegacion {
+          padding: 1rem;
+        }
+      
+        .navegacion li{
+          padding: 0.5rem 0; /* Espacio entre los enlaces */
+          margin: 0; /* Elimina el margen por defecto */
+        }
+        .section,
+        .section-mas {
+          padding: 2rem;
+          font-size: 1.4rem;
+        }
+      
+        .section-mas {
+          height: auto;
+        }
+      
+        .contenido {
+          font-size: 1.4rem;  
+        }
+      
+        .imagen-principal {
+          height: auto;
+        }
+      
+        .imagen__principal {
+          height: 30rem;
+          background-size: cover;
+          background-position: center;
+        }
+      
+        .capitulo {
+          font-size: 1.4rem;
+        }
+      
+        .capitulo .numero {
+          width: 4rem;
+        }
+      
+        .boton-final {
+          display: none; /* Oculta el botón en móviles */
+        }
+      
+        .icon11 {  
+          max-width: 20px;
+        }
+      
+        .section-mas img {
+          width: 100%;
+          max-width: 80rem;
+          height: auto;
+          gap: 0; /* Elimina el espacio entre imágenes */
+        }
+        .navegacion img {
+          width: 100%;
+          height: auto;
+          margin: 0 auto; /* Centra la imagen */
+        }
 
-  }
-
-  .navegacion .enlace {
-    font-size: 3.8rem;
-  }
-
-  .agrandar {
-    font-size: 3.8rem;
-  }
-
-  .contenido {
-    font-size: 1rem;
+        /* Ajuste para íconos en mobile */
+        .icon1{
+          width: 100%;
+          max-width: 160px; /* Ajustado para móviles */
+        }
+        .icon2{
+          width: 100%;
+          max-width: 195px; /* Ajustado para móviles */
+        }
+        .icon3{
+          width: 100%;
+          max-width: 230px; /* Ajustado para móviles */
+        }
+        .icon4 {
+          width: 100%;
+          max-width: 120px;
+          gap: 0; /* Elimina el espacio entre imágenes */
+        }
+      
+        .icon5 {
+          width: 100%;
+          max-width: 20px;
+          gap: 0; /* Elimina el espacio entre imágenes */
+        }
+      }
+      
     
-  }
-  .contenido.activo {
-    font-size: 2rem; 
-  }
- 
-  .bloque_mas {
-    font-size: 7rem;
-  }
+   
+      @media (max-width: 768px) {
+        
+        body {
+          overflow-x: hidden;
+          padding: 0;
+        }
+      
+        .navegacion {
+          padding: 0 3rem;
+        }
+      .nav li{
+        padding: 0.5rem 0; /* Espacio entre los enlaces */
+        margin: 0; /* Elimina el margen por defecto */
+      }
+        .section,
+        .section-mas {
+          padding: 2rem;
+          font-size: 1.6rem;
+        }
+        
+        .section-mas {
+          height: auto;
+        }
+        
+        .contenido {
+          font-size: 1.6rem;
+          padding: 1rem;
+        }
+        
+        .imagen-principal {
+          height: auto;
+        }
+        
+        .imagen__principal {
+          height: 30rem;
+          background-size: cover;
+          background-position: center;
+        }
+        
+        .capitulo {
+          font-size: 1.6rem;
+        }
+        
+        .capitulo .numero {
+          width: 4rem;
+        }
+        
+        .boton-final {
+          display: none; /* Oculta el botón en móviles */
+        }
+        
+        .icon11 {  
+          max-width: 20px;
+        }
+        
+        .section-mas img {
+          width: 100%;
+          max-width: 80rem;
+          height: auto;
+          gap: 0; /* Elimina el espacio entre imágenes */
+      }
+        .navegacion img {
+          width: 100%;
+          height: auto;
+          margin: 0 auto; /* Centra la imagen */
+        }   
+        
+        .contenido {
+          font-size: 1.8rem;
+        }
 
-  .section {
-    font-size: 2rem;
-    padding: 1rem 2rem;
-    height: 80vh; /* Ajustado para móviles */
-  }
+        .section,
+        .section-mas {
+          padding: 3rem;
+          font-size: 1.8rem;
+          height: auto;
+        }
 
-  .capitulo {
-    font-size: 2rem;
-  }
-
-  .contenido .linea-superior {
-    font-size: 2rem;
-  }
-  .imagen-principal {
-    height: 50vh; /* Más compacto en móviles */
-  }
-  .imagen__principal {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-}
-
-/* ─── 📱 Móviles pequeños hasta 480px ───────────────────── */
-@media screen and (max-width: 480px) {
- .navegacion {
-    margin: 0 auto;
-    padding: 10rem 1rem;
-    height: 120vh; /* Ajustado para móviles pequeños */
-  }
-  .icon1 {
-    content: url('/imagen/Recurso_1.png');
-    width: 100%;
-    max-width: 250px; /* Ajustado para móviles pequeños */
-  }
-  .icon2 {
-    content: url('/imagen/Recurso-2.png');
-    width: 100%;
-    max-width: 300px; /* Ajustado para móviles pequeños */
-  }
-  .icon3 {
-    content: url('/imagen/Recurso_3.png');
-    width: 100%;
-    max-width: 350px; /* Ajustado para móviles pequeños */
-  }
-  .icon4 {
-    content: url('/imagen/Recurso_4.png');
-    width: 100%;
-    max-width: 180px; /* Ajustado para móviles pequeños */
-  } 
- 
-  .navegacion .enlace {
-    font-size: 3rem;
-  }
-
-  .contenido {
-    font-size: 1.6rem;
-    padding: 0 1rem; /* Espaciado horizontal */
-  }
- 
-  .bloque_mas {
-    font-size: 3.7rem;
-  }
-
-  .section {
-    font-size: 1.8rem;
-    max-height: 60vh; /* Ajustado para móviles pequeños */
-    padding: 1rem 1rem;
-    height: 100vh; /* Ajustado para móviles pequeños */
-  }
-
-  .capitulo {
-    font-size: 1.8rem;
-  }
-
-  .contenido .linea-superior {
-    font-size: 1.8rem;
-  }
-  .imagen-principal {
-    height: 40vh; /* Más compacto en móviles pequeños */
-  }
-}
-
+      }
