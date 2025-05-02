@@ -418,7 +418,11 @@
         }
       }
       
-    
+      @media (max-width: 768px) and (orientation: landscape) {
+        .navegacion {
+          padding: 5rem 3rem; /* Reducido */
+        }
+      }
    
       @media (max-width: 768px) {
         
