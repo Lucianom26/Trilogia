@@ -202,11 +202,11 @@
 .contenido.activo {
   max-height: 50rem; /* Ajusta según el tamaño de tu contenido */
   opacity: 1;
-  padding: 30px 0; /* Un poco de padding para el contenido desplegado */
+  padding: 20px 0; /* Un poco de padding para el contenido desplegado */
   transition: max-height 0.5s ease, opacity 0.3s ease;
 }
  .contenido p{
-  margin: 0.2em 0;
+  margin: 0.1em 0;
 }
 /* Opcional: Mejorar el espaciado de los textos dentro de las secciones */
 .bloque {
@@ -225,7 +225,7 @@
 }
      .section {
       width: 100%; /* <-- Cambiado de 100vw */
-      padding: 3rem 5rem;
+      padding: 2rem 5rem;
       color: var(--negro);
       font-size: 2.5rem;
       font-family: 'Gotham-Book';
@@ -237,7 +237,7 @@
        .section-mas {
         width: 100%; /* <-- Cambiado de 100vw */
         height: 100vh;
-        padding: 3rem 5rem;
+        padding: 2rem 5rem;
         color: var(--negro);
         font-size: 2.5rem;
         font-family: 'Gotham-Book';
@@ -333,7 +333,7 @@
         }
       
         .navegacion {
-          padding: 20rem 1rem;
+          padding: 15rem 1rem;
         }
       
         .navegacion li{
@@ -348,11 +348,12 @@
       
         .section-mas {
           height: auto;
-          padding: 1rem 0;
+          margin-top: 10rem;
         }
       
         .contenido {
           font-size: 1.4rem;  
+          padding: .5rem 0;
         }
       
         .imagen-principal {
@@ -373,12 +374,12 @@
           width: 4rem;
         }
       
-        .boton-final {
-          display: none; /* Oculta el botón en móviles */
+       .boton-final {
+          display: none;
         }
       
         .icon11 {  
-          max-width: 20px;
+          max-width: 10px;
         }
       
         .section-mas img {
@@ -438,8 +439,8 @@
         }
       
         .navegacion {
-          padding: 15rem 3rem;
-          height: 110vh; /* Cambiado a vh para ocupar toda la pantalla */
+          padding: 10rem 3rem;
+           /* Cambiado a vh para ocupar toda la pantalla */
         }
         .navegacion li{
         padding: 1rem 0; /* Espacio entre los enlaces */
@@ -487,7 +488,7 @@
         
         .section-mas {
           height: auto;
-          padding: 0.5rem 0;
+          margin-top: 10rem;
         }
         
         .contenido {
@@ -513,8 +514,8 @@
           width: 4rem;
         }
         
-        .boton-final {
-          display: none; /* Oculta el botón en móviles */
+      .boton-final {
+          display: none; 
         }
         
         .icon11 {  
