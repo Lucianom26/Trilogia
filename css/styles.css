@@ -423,6 +423,11 @@
         .navegacion {
           padding: 5rem 3rem; /* Reducido */
         }
+        .navegacion li{
+          padding: 0.5rem 0; /* Espacio entre los enlaces */
+          margin: 0; /* Elimina el margen por defecto */
+          gap: 0;
+        }
       }
    
       @media (max-width: 768px) {
@@ -433,10 +438,11 @@
         }
       
         .navegacion {
-          padding: 10rem 3rem;
+          padding: 15rem 3rem;
+          height: 110vh; /* Cambiado a vh para ocupar toda la pantalla */
         }
-        .nav li{
-        padding: 0.5rem 0; /* Espacio entre los enlaces */
+        .navegacion li{
+        padding: 1rem 0; /* Espacio entre los enlaces */
         margin: 0; /* Elimina el margen por defecto */
         gap: 0;
       }
@@ -476,12 +482,12 @@
         .section,
         .section-mas {
           padding: 2rem;
-          font-size: 1.6rem;
+          font-size: 1.5rem;
         }
         
         .section-mas {
           height: auto;
-          padding: 1rem 0;
+          padding: 0.5rem 0;
         }
         
         .contenido {
