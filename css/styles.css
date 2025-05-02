@@ -334,7 +334,7 @@
         }
       
         .navegacion {
-          padding: 15rem 1rem;
+          padding: 20rem 1rem;
         }
       
         .navegacion li{
@@ -430,7 +430,7 @@
         }
       
         .navegacion {
-          padding: 5rem 3rem;
+          padding: 15rem 3rem;
            /* Cambiado a vh para ocupar toda la pantalla */
         }
         .navegacion li{
