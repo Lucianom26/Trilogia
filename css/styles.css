@@ -333,9 +333,9 @@
           padding: 0;
         }
       
-        .navegacion {
-          padding: 20rem 1rem;
-        }
+       /* .navegacion {
+          padding: 25rem 1rem;
+        }*/
       
         .navegacion li{
           padding: 2rem 0; /* Espacio entre los enlaces */
@@ -349,7 +349,7 @@
       
         .section-mas {
           height: auto;
-          margin-top: 10rem;
+          margin-top: 20rem;
         }
       
         .contenido {
@@ -430,7 +430,7 @@
         }
       
         .navegacion {
-          padding: 18rem 3rem;
+          padding: 15rem 3rem;
            /* Cambiado a vh para ocupar toda la pantalla */
         }
         .navegacion li{
