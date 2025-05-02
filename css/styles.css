@@ -430,7 +430,7 @@
         }
       
         .navegacion {
-          padding: 15rem 3rem;
+          padding: 18rem 3rem;
            /* Cambiado a vh para ocupar toda la pantalla */
         }
         .navegacion li{
@@ -479,7 +479,7 @@
         
         .section-mas {
           height: auto;
-          margin-top: 20rem;
+          margin-top: 25rem;
         }
         
         .contenido {
