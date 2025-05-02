@@ -333,7 +333,7 @@
         }
       
         .navegacion {
-          padding: 10rem 1rem;
+          padding: 20rem 1rem;
         }
       
         .navegacion li{
@@ -403,7 +403,7 @@
         }
         .icon3{
           width: 100%;
-          max-width: 230px; /* Ajustado para móviles */
+          max-width: 235px; /* Ajustado para móviles */
         }
         .icon4 {
           width: 100%;
@@ -454,7 +454,7 @@
       }
       .icon3{
         width: 100%;
-        max-width: 260px; /* Ajustado para móviles */
+        max-width: 270px; /* Ajustado para móviles */
       }
       .icon4 {
         width: 100%;
