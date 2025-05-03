@@ -41,13 +41,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Alternar clase 'activo' en el botón
     this.classList.toggle('activo');
 
-    // Mostrar u ocultar todos los bloques
+    // Mostrar u ocultar los bloques
     bloquesMas.forEach(bloque => {
       if (estaActivo) {
-        bloque.classList.remove('activo'); // ocultar
+        bloque.classList.remove('activo');
       } else {
-        bloque.classList.add('activo');    // mostrar
+        bloque.classList.add('activo');
       }
     });
+
+    // Si lo estamos abriendo, hacer scroll al primer bloque
+    if (!estaActivo) {
+      const primerBloque = bloquesMas[0];
+      if (primerBloque) {
+        primerBloque.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
   });
 });
