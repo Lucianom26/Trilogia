@@ -24,18 +24,30 @@ document.addEventListener('DOMContentLoaded', () => {
       c.classList.remove('activo');
     }
   });
+  
+    });
+  });
+});
 
-      // Si el enlace tiene el data-target="mas", expandimos la navegación
-    //  const nav = document.querySelector('.navegacion');
-     // if (this.getAttribute('data-target') === 'mas') {
-   //     nav.classList.toggle('expandido');
-  //    }
+document.addEventListener('DOMContentLoaded', () => {
+  const botonMas = document.querySelector('.ir-a-mas');
+  const bloquesMas = document.querySelectorAll('.bloque-mas');
 
-   
-      // Expande la navegación si es el enlace con data-target="mas"
-     // if (this.getAttribute('data-target') === 'mas') {
-   //     nav.classList.toggle('expandido');
- //     }
+  botonMas.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const estaActivo = this.classList.contains('activo');
+
+    // Alternar clase 'activo' en el botón
+    this.classList.toggle('activo');
+
+    // Mostrar u ocultar todos los bloques
+    bloquesMas.forEach(bloque => {
+      if (estaActivo) {
+        bloque.classList.remove('activo'); // ocultar
+      } else {
+        bloque.classList.add('activo');    // mostrar
+      }
     });
   });
 });
