@@ -98,7 +98,6 @@
   margin: 0; /* Elimina el margen por defecto */
   display: flex;
   flex-direction: column;
- 
 }
 
 .navegacion li {
@@ -402,29 +401,29 @@
         }
 
         /* Ajuste para íconos en mobile */
-        .icon1{
-          width: 100%;
-          max-width: 200px; /* Ajustado para móviles */
-        }
-        .icon2{
-          width: 100%;
-          max-width: 235px; /* Ajustado para móviles */
-        }
-        .icon3{
-          width: 100%;
-          max-width: 270px; /* Ajustado para móviles */
-        }
-        .icon4 {
-          width: 100%;
-          max-width: 150px;
-          gap: 0; /* Elimina el espacio entre imágenes */
-        }
-      
-        .icon5 {
-          width: 100%;
-          max-width: 30px;
-          gap: 0; /* Elimina el espacio entre imágenes */
-        }
+      .icon1{
+        width: 100%;
+        max-width: 290px; /* Ajustado para móviles */
+      }
+      .icon2{
+        width: 100%;
+        max-width: 330px; /* Ajustado para móviles */
+      }
+      .icon3{
+        width: 100%;
+        max-width: 360px; /* Ajustado para móviles */
+      }
+      .icon4 {
+        width: 100%;
+        max-width: 208px;
+        gap: 0; /* Elimina el espacio entre imágenes */
+      }
+    
+      .icon5 {
+        width: 100%;
+        max-width: 30px;
+        gap: 0; /* Elimina el espacio entre imágenes */
+      }
       }
       
        
@@ -451,19 +450,19 @@
       /* Ajuste para íconos en mobile */
       .icon1{
         width: 100%;
-        max-width: 300px; /* Ajustado para móviles */
+        max-width: 290px; /* Ajustado para móviles */
       }
       .icon2{
         width: 100%;
-        max-width: 340px; /* Ajustado para móviles */
+        max-width: 330px; /* Ajustado para móviles */
       }
       .icon3{
         width: 100%;
-        max-width: 370px; /* Ajustado para móviles */
+        max-width: 360px; /* Ajustado para móviles */
       }
       .icon4 {
         width: 100%;
-        max-width: 218px;
+        max-width: 208px;
         gap: 0; /* Elimina el espacio entre imágenes */
       }
     
