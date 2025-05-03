@@ -342,7 +342,11 @@
           overflow-x: hidden;
           padding: 0;
         }
-      
+       .navegacion{
+        
+        padding: 10rem 3rem;
+
+       }
         .navegacion li{
           padding: 1rem 0; /* Espacio entre los enlaces */
           margin: 0; /* Elimina el margen por defecto */
@@ -400,22 +404,22 @@
           margin: 0 auto; /* Centra la imagen */
         }
 
-        /* Ajuste para íconos en mobile */
-      .icon1{
+       /* Ajuste para íconos en mobile */
+       .icon1{
         width: 100%;
-        max-width: 290px; /* Ajustado para móviles */
+        max-width: 200px; /* Ajustado para móviles */
       }
       .icon2{
         width: 100%;
-        max-width: 330px; /* Ajustado para móviles */
+        max-width: 250px; /* Ajustado para móviles */
       }
       .icon3{
         width: 100%;
-        max-width: 360px; /* Ajustado para móviles */
+        max-width: 290px; /* Ajustado para móviles */
       }
       .icon4 {
         width: 100%;
-        max-width: 208px;
+        max-width: 150px;
         gap: 0; /* Elimina el espacio entre imágenes */
       }
     
@@ -424,8 +428,8 @@
         max-width: 30px;
         gap: 0; /* Elimina el espacio entre imágenes */
       }
-      }
-      
+
+    }
        
       @media (max-width: 768px){
         
@@ -433,7 +437,11 @@
           overflow-x: hidden;
           padding: 0;
         }
-      
+
+        .navegacion{
+          padding: 10rem 3rem;
+         }
+
         .navegacion li{
         padding: 2rem 0; /* Espacio entre los enlaces */
         margin: 0; /* Elimina el margen por defecto */
@@ -450,19 +458,19 @@
       /* Ajuste para íconos en mobile */
       .icon1{
         width: 100%;
-        max-width: 290px; /* Ajustado para móviles */
+        max-width: 200px; /* Ajustado para móviles */
       }
       .icon2{
         width: 100%;
-        max-width: 330px; /* Ajustado para móviles */
+        max-width: 250px; /* Ajustado para móviles */
       }
       .icon3{
         width: 100%;
-        max-width: 360px; /* Ajustado para móviles */
+        max-width: 290px; /* Ajustado para móviles */
       }
       .icon4 {
         width: 100%;
-        max-width: 208px;
+        max-width: 150px;
         gap: 0; /* Elimina el espacio entre imágenes */
       }
     
