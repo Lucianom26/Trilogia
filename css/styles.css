@@ -361,7 +361,7 @@
         }
        .navegacion{
         
-        padding: 10rem 3rem;
+        padding: 15rem 3rem;
 
        }
         .navegacion li{
@@ -456,11 +456,11 @@
         }
 
         .navegacion{
-          padding: 10rem 3rem;
+          padding: 20rem 3rem;
          }
 
         .navegacion li{
-        padding: 2rem 0; /* Espacio entre los enlaces */
+        padding: 1rem 0; /* Espacio entre los enlaces */
         margin: 0; /* Elimina el margen por defecto */
         gap: 0;
       }
