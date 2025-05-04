@@ -156,6 +156,23 @@
   max-width: 40px;
 }
 
+/* Imagen oscura cuando el enlace tiene la clase 'activo' */
+.enlace.activo .icon-inicio {
+  content: url('/imagen/2.svg');
+}
+
+.enlace.activo .icon-nosotros {
+  content: url('/imagen/4.svg');
+}
+
+.enlace.activo .icon-servicios {
+  content: url('/imagen/6.svg');
+}
+
+.enlace.activo .icon-contacto {
+  content: url('/imagen/8.svg');
+}
+
 /* Imagen oscura al hacer hover en el enlace */
 .enlace:hover .icon-inicio {
   content: url('/imagen/2.svg');
@@ -545,4 +562,10 @@
           height: auto;
         }
 
+      }
+      @media screen and (width: 1440px) and (height: 900px) {
+        /* Estilo específico para esa resolución */
+        .navegacion {
+          height: 100vh;
+        }
       }
