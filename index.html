@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Trilogía</title>
-    <link rel="icon" href="imagen/trilogia_icon.png" type="image/png"
+    <link rel="icon" href="imagen/trilogia_icon.png" type="image/png">
 </head>
 <body>
   <main class="scroll-secciones" >
@@ -39,15 +39,23 @@
                
                <img class="icon2 icon-nosotros" alt="Nosotros">
               </a>
-                <div id="trilogia" class="contenido">
+              <div id="trilogia" class="contenido">
                   <p>TRILOGIA>> Estudio de diseño multidisciplinario con base en Buenos Aires, Argentina.</p>
-                  <p>Abarcamos diseño 360, acompañando a las empresas en sus proyectos de identidad hasta desarrollos de imagen
-                  y comunicación.</p>
-                  <p>Apoyamos proyectos culturales, desarrollamos diseño de libros de artistas y exhibiciones de arte.</p>
-                  <p>Nos encienden las empresas con alma y proyectos de sostenibilidad. </p>
-                  <p>Diseñamos y activamos proyectos con propósito de impacto positivo, compromiso social y 
-                  bien común.
+                  <p>Con 40 años de experiencia en diseño, el rango de proyectos del estudio abarca desde diseños 
+                     editoriales hasta identidades corporativas e implementación de redes comerciales.</p>
+                  <p>Distinguido con el Sello del Buen Diseño Argentino, actualmente el estudio está orientado a la 
+                     creación de proyectos culturales y acompaña a empresas y organizaciones que estén implementando o 
+                     pensando políticas sostenibles.</p>
+                  <p>
+                    Apoyamos proyectos culturales, desarrollamos diseño de libros de artistas y exhibiciones de arte.  
                   </p>
+                  <p>
+                     Nos encienden las empresas con alma y proyectos de sostenibilidad.
+                  </p>
+                  <p>
+                   Diseñamos y activamos proyectos con propósito de impacto positivo, compromiso social y bien común.
+                  </p>
+                </div>
                 </div>
             </div>
           </li>
@@ -83,6 +91,7 @@
             </a>
               <div id="studio" class="contenido">
                 <p>Contacto: Fabian.Trigo@gmail.com</p>
+                <p style="text-indent: 5em;">@trilogia.proyectos</p>
               </div>
             </div>
           </li>
@@ -100,11 +109,19 @@
       </nav>
    <div id="catedra">
       <section class="section-mas bloque-mas" id="ir_mas">
-        <img src="/imagen/SOCIOAMBIENTAL.svg" alt="">
+        <img class="imagen-socioambiental" src="/imagen/SOCIOAMBIENTAL.svg" alt="">
            <p><span class="linea-superior">T</span>E LLEVAMOS MÁS ALLÁ DE TU MIRADA </p>
             <p>Te enseñamos a diseñar ecopoéticas para las personas humanas y no humanas, animales,
              bosques, ríos, a darles voz, y a crear proyectos que otorguen  visibilidad en la urgencia socioambiental.
             </p>
+      </section>
+      <section class="section-mas bloque-mas">
+           <p><span class="linea-superior">C</span>ONOCE PROYECTOS DE LA CATEDRA </p>
+           <div class="slideshow-container" id="slideshow-container">
+            <!-- Las flechas se agregan antes del JS -->
+            <a class="prev" onclick="changeSlide(-1)">❮</a>
+            <a class="next" onclick="changeSlide(1)">❯</a>
+          </div>
       </section>
 
       <div class="imagen-principal bloque-mas">
@@ -208,6 +225,7 @@
       <img class="icon11 icon-volver" alt=""></i>
     </a>
   <script src="JS/script.js"></script>
+  <script src="JS/slide.js"></script>
 </body>
 
 </html>
