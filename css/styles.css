@@ -209,20 +209,19 @@
   font-weight: 200; /* Cambiado a 100 para mayor ligereza */
   color: var(--negro);
   background-color: var(--blanco); /* Fondo blanco para el contenido */
-  padding: 0; /* Espaciado horizontal */
-  
+  padding: 0; /* Espaciado horizontal */ 
 }
 
 /* Cuando se activa el acordeón */
 
 .contenido.activo {
-  max-height: 50rem; /* Ajusta según el tamaño de tu contenido */
+  max-height: 60rem; /* Ajusta según el tamaño de tu contenido */
   opacity: 1;
-  padding: 20px 0; /* Un poco de padding para el contenido desplegado */
+  padding: 10px 0; /* Un poco de padding para el contenido desplegado */
   transition: max-height 0.5s ease, opacity 0.3s ease;
 }
  .contenido p{
-  margin: 0.1em 0;
+  margin: .8em 0;
 }
 /* Opcional: Mejorar el espaciado de los textos dentro de las secciones */
 .bloque {
@@ -230,15 +229,6 @@
   line-height: 1;
 }
 
-/*.bloque_mas {
-  display: block;
-  line-height: 1;
-  font-size: 6.5rem;
-  font-family: 'Gotham-Book';
-  font-weight: 300;
-  color: var(--primarioOscuro);
-  letter-spacing: 0rem;
-}*/
      .section {
       width: 100%; /* <-- Cambiado de 100vw */
       padding: 3rem 3rem;
@@ -349,45 +339,46 @@
       .boton-final:hover .icon-volver {
         content: url('/imagen/12.svg');
       }
+     /* Slide Show */
+      .mySlides {display: none;}
+
+      .mySlides img {vertical-align: middle;
+      border: var(--primarioOscuro) 1px solid;
+      }
+
       .slideshow-container {
-        position: relative;
-        width: 100%;
-        max-width: 50dvw;
-        margin: 40px auto;
-        background-color: #000;
-        overflow: hidden;
+             max-width: 1000px;
+             position: relative;
+             margin: auto;
+            }
+        /* The dots/bullets/indicators */
+      .dot {
+      height: 2px;
+      width: 2px;
+      margin: 0 2px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
       }
-  
-      .slide {
-        display: none;
-      }
-  
-      .slide img {
-        width: 100%;
-        height: 70dvh;
-        display: block;
-      }
-  
+            
+
       .active {
-        display: block;
+         background-color: #fff;
+          }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
       }
-  
-      .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 12px;
-        color: white;
-        font-size: 24px;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
-        user-select: none;
-        z-index: 10;
-      }
-  
-      .prev { left: 10px; }
-      .next { right: 10px; }
+
+      @keyframes fade {
+              from {opacity: .4} 
+              to {opacity: 1}
+              }
+
+     /*fin slideshow*/
 
       @media (max-width: 428px) {
         html {
@@ -406,11 +397,12 @@
         .navegacion li{
           padding: 1rem 0; /* Espacio entre los enlaces */
           margin: 0; /* Elimina el margen por defecto */
+          gap: 0;
         }
         .section,
         .section-mas {
           padding: 0 5rem;
-          font-size: 1.4rem;
+          font-size: 1.2rem;
         }
       
         .section-mas {
@@ -418,10 +410,14 @@
         }
       
         .contenido {
-          font-size: 1.4rem;  
-          padding: .5rem 0;
+          font-size: 1.2rem;  
+           padding: .5rem 0;
         }
       
+        .contenido p {
+          margin: .5em 0;
+        }
+
         .imagen-principal {
           height: auto;
         }
@@ -484,18 +480,7 @@
         max-width: 30px;
         gap: 0; /* Elimina el espacio entre imágenes */
       }
-      .slideshow-container{
-        width: 100%;
-        max-width: 50dvw;
-      }
-      .slide img{
-        width: 100%;
-        height: 50dvh;
-      }
-      .prev, .next {
-        font-size: 18px;
-        padding: 8px;
-      }
+    
 
 
     }
@@ -614,21 +599,14 @@
           height: auto;
         }
 
-        .slideshow-container{
-        width: 100%;
-        max-width: 70dvw;
-      }
-      .slide img{
-        width: 100%;
-        height: 40dvh;
-      }
-        .prev, .next {
-          font-size: 18px;
-          padding: 8px;
-        }
-  
+    .slideshow-container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
 
-      }
+ }
+
+
       @media screen and (width: 1440px) and (height: 900px) {
         /* Estilo específico para esa resolución */
         .navegacion {
